@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 style="margin: 30px 0 0 300px; color: red">Quản lý cho học sinh mượn sách</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Họ tên</th>
+      <th scope="col">Lớp</th>
+      <th scope="col">Mã Sách</th>
+      <th scope="col">Tên Sách</th>
+      <th scope="col">Tác giả</th>
+      <th scope="col">Số bảo mật</th>
+      <th scope="col">Ngày mượn</th>
+      <th scope="col">Ngày trả</th>
+      <th scope="col">Số ngày mượn</th>
+      <th scope="col">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @qlbooks.each_with_index do |book, index| %>
+      <tr>
+        <th scope="row"><%= index+1 %></th>
+        <td><%= book.mahs_262 %></td>
+        <td><%= book.hoten_262 %></td>
+        <td><%= book.masach_262 %></td>
+        <td><%= book.tensach_262 %></td>
+        <td><%= book.tentacgia_262 %></td>
+        <td><%= book.soBM_262 %></td>
+        <td><%= book.ngaymuon_262 %></td>
+        <td><%= book.ngaytra_262 %></td>
+        <td>10</td> 
+        <td><%= book.ghichu_262 %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to "Thêm sách", new_qlbook_path %>

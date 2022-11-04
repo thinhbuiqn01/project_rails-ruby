@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @qlbook %>
+
+<div>
+  <%= link_to "Edit this qlbook", edit_qlbook_path(@qlbook) %> |
+  <%= link_to "Back to qlbooks", qlbooks_path %>
+
+  <%= button_to "Destroy this qlbook", @qlbook, method: :delete %>
+</div>

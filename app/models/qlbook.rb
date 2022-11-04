@@ -1,0 +1,2 @@
+class Qlbook < ApplicationRecord
+end
